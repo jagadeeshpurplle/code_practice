@@ -2,11 +2,10 @@ package first;
 
 public class BubbleSort {
 	void bubbleSort(int arr[]) {
-		int n = arr.length;
-		for (int i = 0; i < n - 1; i++) {
-			System.out.println(n - i - 1);
+		int n = arr.length - 1;
+		for (int i = 0; i < n; i++) {
 			System.out.println(arr[i]);
-			for (int j = 0; j < n - i - 1; j++) {
+			for (int j = 0; j < n - i; j++) {
 				System.out.println(arr[j] + ", " + arr[j + 1]);
 				if (arr[j] > arr[j + 1]) {
 					// swap arr[j+1] and arr[i]

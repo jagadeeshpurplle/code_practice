@@ -15,7 +15,7 @@ public class PhoneNoGeneration {
 		DecimalFormat df3 = new DecimalFormat("000"); // 3 zeros
 		DecimalFormat df4 = new DecimalFormat("0000"); // 4 zeros
 
-		String phoneNumber = df3.format(num1) + "" + df3.format(num2) + "" + df4.format(num3);
+		String phoneNumber = df3.format(num1) + "-" + df3.format(num2) + "-" + df4.format(num3);
 		return phoneNumber;
 	}
 

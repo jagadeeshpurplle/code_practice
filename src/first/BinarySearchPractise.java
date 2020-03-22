@@ -51,20 +51,18 @@ public class BinarySearchPractise {
 		int size = arr.length - 1, l = 0;
 
 		while (l <= size) {
-			int m = (l + size) / 2;
-			System.out.println(m + "," + arr[m]);
 
-			if (arr[m] == x) {
+			int m = (l + size) / 2;
+			if (arr[m] == x)
 				return m;
-			}
-			if (x > arr[m]) {
+
+			if (x > arr[m])
 				l = m + 1;
-			} else {
+			else
 				size = m - 1;
-				System.out.println("size: " + size);
-			}
+
 		}
-		System.out.println("Not found");
+
 		return -1;
 
 	}

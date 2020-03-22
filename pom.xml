@@ -3,7 +3,9 @@
   <groupId>code_practise</groupId>
   <artifactId>code_practise</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  
   <build>
+  
     <sourceDirectory>src</sourceDirectory>
     <plugins>
       <plugin>
@@ -14,6 +16,17 @@
           <target>1.8</target>
         </configuration>
       </plugin>
+      
+      
     </plugins>
+
   </build>
+  <dependencies>
+<dependency>
+  <groupId>com.google.guava</groupId>
+  <artifactId>guava</artifactId>
+  <version>23.0</version>
+</dependency>
+</dependencies>
+
 </project>
