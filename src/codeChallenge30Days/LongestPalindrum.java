@@ -6,7 +6,7 @@ public class LongestPalindrum {
 	public static int resultLength;
 
 	public static void main(String[] args) {
-		System.out.println(getLongestPalindrum("subbaraooar"));
+		System.out.println(getLongestPalindrum("suus"));
 	}
 
 	public static String getLongestPalindrum(String s) {
@@ -14,8 +14,8 @@ public class LongestPalindrum {
 		if (size < 2)
 			return s;
 		for (int start = 0; start < s.length() - 1; start++) {
-			getExpandRange(s, start, start); // if string size is even
-			getExpandRange(s, start, start + 1); // if string size is add
+			getExpandRange(s, start, start); // if string size is odd
+			getExpandRange(s, start, start + 1); // if string size is even
 		}
 
 		return s.substring(resultStart, resultStart + resultLength);
