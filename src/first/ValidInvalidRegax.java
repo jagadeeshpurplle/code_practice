@@ -17,7 +17,6 @@ public class ValidInvalidRegax {
             }catch(PatternSyntaxException exception){
                 System.out.println("Invalid");
             }
-
         }
     }
 	

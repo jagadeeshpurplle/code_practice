@@ -46,4 +46,26 @@ public class BinarySearc {
 			System.out.println("Element found at "
 							+ "index " + result); 
 	} 
+	
+	public int s(int[] u, int x) {
+		
+		int l=0, r=u.length-1;
+		
+		while(l<=r) {
+			int m = (l+r)/2;
+			
+			if(u[m] == x) {
+				return m;
+			}
+			
+			if(u[m] > x) {
+				r = m -1;
+			}
+			else {
+				l = m +1;
+			}
+		}
+		
+		return -1;
+	}
 } 
