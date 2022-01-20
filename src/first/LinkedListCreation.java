@@ -6,7 +6,7 @@ import javax.xml.soap.Node;
 public class LinkedListCreation {
 
 	Node head;
-	
+
 	static class Node {
 		 
 		int data;
@@ -16,6 +16,30 @@ public class LinkedListCreation {
 			next=null;
 		}
 		
+	}
+	
+	
+	public static Node reverseLinkedList(Node head) {
+		
+		Node prev = null;
+		
+		while(head !=null) {
+			Node headNext = head.next;
+			head.next = prev;
+			prev = head;
+			head = headNext;
+		}
+				
+		
+		Node previous = null;
+		while(head !=null) {
+			Node nextHead = head.next; //2 3 null
+			head.next = previous; //3-> 2->1->null
+			prev = head; // 1 2 3
+			head = nextHead; // 2 3 null
+			
+		}
+		return prev;
 	}
 	
 	public void printList() {
@@ -56,14 +80,12 @@ public class LinkedListCreation {
 	}
 	
 	public void push(int newData) {
-		
 		Node new_Node= new Node(newData);
 		new_Node.next=head;
 		head=new_Node;
 		
 	}
 	public void insertAfter(Node previous, int newData) {
-		
 		if(previous==null) {
 			System.out.println("the given position cannot be null");
 			return;

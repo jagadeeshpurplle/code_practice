@@ -1,5 +1,70 @@
-hey
-this is jagadeesh tummalacharla
-123
-hey 
-this is jagadeesh jagadeesh
+DAST
+
+Connect with the DAST enablement team
+1. Send an email to secnetq@pega.com with the subject line "request DAST enablement" to Arrange a meeting and Collaborate.
+2. Get plan and a development epic from The service/product team to set up for the initial test cases for DAST
+3. Get necessary details aboutthe testing type. Ex: The coverage,running in the pipeline
+
+Tool/s Identification
+1. Get consultation meeting with DAST enablement team to tool(ex; Tenable Web Scanner) selection and a plan to get us enabled.
+2. Get the sign off/approval for the considered tool
+
+Proof of conceprt using the tool - run sample test
+1. Get necessary access to the tool/repository/framework
+2. Run the sample tests as a standalone
+
+Implementation - Create and run the actual tests (Objective number)
+1. Integrate the previously created standalone tests to the template
+2. Create the necessary tests and execute
+3. Run the test as part of pipeline if required
+4. The Dynamic Application Security Testing (DAST) part of the Quality Standards bjective is met
+5. Get a sign off from the DAST enablement team for testing part
+
+
+SAST
+
+Connect with the SAST enablement team
+1. Arrange the meeting and collaborate with the necessary team.
+2. Get necessary details aboutthe testing type. Ex: The coverage,running in the pipeline
+
+Tool/s Identification
+1. Discuss and confirm the which tool to be used for testing
+	1. For Pega rules, you must use Rule Security Analyzer (RSA),
+	2. For Veracode's supported languages, you must integrate your build with Veracode using the CI/CD solution,
+2. Get the sign off/approval for the considered tool
+
+Proof of conceprt using the tool - run sample test
+1. Get necessary access to the tool/repository/framework
+2. Run the sample tests as a standalone
+
+Implementation - Create and run the actual tests (Objective number)
+1. Integrate the previously created standalone tests to the template
+2. Create the necessary tests and execute
+3. Run the test as part of pipeline if required
+4. Static Application Security Testing (SAST) part of the Quality Standards bjective is met
+5. Get a sign off from the SAST enablement team for testing part
+
+
+Contract testing
+
+Connect with the respective team
+1. Define our own contract and share with producer respective team(S0 that they can run them as part of their build pipeline and act accordingly in case of any failures(break in the contract).
+2. Get necessary details aboutthe testing type. Ex: The API/etc coverage,running in the pipeline
+
+Tool/s Identification
+1. Discuss and confirm the which tool to be used for better aproach of testing
+	ex: Pact, Spring Cloud Contract, Pacto, VCR, etc
+2. Get the sign off/approval for the considered tool
+
+Proof of conceprt using the tool - run sample test
+1. Get necessary access to the tool/repository/framework
+2. Setup the consumer/provider for running the tests
+2. Run the sample tests as a standalone
+
+Implementation - Create and run the actual tests (Objective number)
+1. Integrate the previously created standalone tests to the template
+2. Create the necessary tests and execute
+3. Run the test as part of pipeline if required
+4. Contract testing part of the Quality Standards bjective is met
+5. Get a sign off from the respective producer team for testing part
+

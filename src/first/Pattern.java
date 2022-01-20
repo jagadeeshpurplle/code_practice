@@ -16,6 +16,24 @@ public class Pattern {
 			}
 			System.out.println();
 		}
+		
+		for(int i=10;i>=0;i--) {
+			for(int j=1;j<=i;j++) {
+				System.out.print("* ");
+			}
+			System.out.println();
+		}
+		
+		for (int i = 10; i >=0; i--) {
+			for (int j = 1; j <= i; j++) {
+				System.out.print(" ");
+			}
+
+			for(int l=i;l<10;l++) {
+				System.out.print("* ");
+			}
+			System.out.println();
+		}
 
 //		System.out.println(2*(5-0));
 	}

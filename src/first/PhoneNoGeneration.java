@@ -2,6 +2,7 @@ package first;
 
 import java.text.DecimalFormat;
 import java.util.Random;
+import java.util.Scanner;
 
 public class PhoneNoGeneration {
 
@@ -21,5 +22,24 @@ public class PhoneNoGeneration {
 
 	public static void main(String[] args) {
 		System.out.println(PhoneNoGeneration.phoneNumberGeneration());
+		test();
 	}
+	
+	public static void test() {
+		 int number;
+	      Scanner sc = new Scanner(System.in);
+	      System.out.println("Enter a number ::");
+	      number = sc.nextInt();
+	     
+	      for(int i = 2; i< number; i++) {
+	         while(number%i == 0) {
+	            System.out.println(i+"dude ");
+	            number = number/i;
+	         }
+	      }
+	      if(number >2) {
+	         System.out.println(number);
+	      }
+	   }
+	
 }

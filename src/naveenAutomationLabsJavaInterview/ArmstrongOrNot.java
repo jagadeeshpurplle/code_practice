@@ -3,9 +3,13 @@ package naveenAutomationLabsJavaInterview;
 public class ArmstrongOrNot {
 	
 	public static void main(String[] args) {
-		System.out.println(armstrongNumber(9));
-		System.out.println(armstrongNumber(123));
-		System.out.println(armstrongNumber(153));
+//		System.out.println(armstrongNumber(9));
+//		System.out.println(armstrongNumber(123));
+//		System.out.println(armstrongNumber(153));
+		for(int i=100;i<999;i++) {
+			if(armstrongNumber(i))
+				System.out.println(true);
+		}
 	}
 
 	public static boolean armstrongNumber(int number) {

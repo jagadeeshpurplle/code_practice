@@ -6,7 +6,7 @@ import java.util.Stack;
 public class ValidParanthesis {
 
 	public static void main(String[] args) {
-	        System.out.println(validParen("{[a[bc]d]e}}"));
+	        System.out.println(isValid("{}{"));
 //	        System.out.println(validParen("()"));
 //	        System.out.println(validParen("()[]{}"));
 //	        System.out.println(validParen("(]"));
@@ -42,6 +42,26 @@ public class ValidParanthesis {
             }
             return true; 
         }
+    }
+	
+	public static boolean isValid(String s) {
+        Stack<Character> st=new Stack<>();
+        for(int i=0;i<s.length();i++){
+            if(s.charAt(i)=='(' || s.charAt(i)=='[' || s.charAt(i)=='{')
+                st.push(s.charAt(i));
+            else if(!st.isEmpty()){
+                char x=st.pop();
+                if(x=='(' && s.charAt(i)!=')')
+                    return false;
+                 if(x=='[' && s.charAt(i)!=']')
+                    return false;
+                 if(x=='{' && s.charAt(i)!='}')
+                    return false;
+            }else{
+                return false;
+            }    
+        }
+        return (st.isEmpty())?(true):(false);
     }
 	
 	public static boolean validStringParan(String s) {

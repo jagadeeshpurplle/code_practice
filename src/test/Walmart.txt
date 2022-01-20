@@ -1,0 +1,67 @@
+package test;
+
+
+public class Walmart {
+
+//	i/p:{"abc","labs","Walmart","xyz","lab","Wal"}, 
+//	word: "Walmartlabs"
+//	O/p: True
+//	Word: PegaLabs
+//	O/p:False
+
+	
+	public static void main(String[] args) {
+	
+		System.out.println(solution(new String[] {"abc","labs","Walmart","xyz","lab","Wal"}, "Walmartlabs"));
+		System.out.println(solution2(new String[] {"abc","labs","Walmart","xyz","lab","Wal"}, "Walmartlabs"));
+
+	}
+
+	public static boolean solution2(String[] array, String expected) {
+		
+		java.util.Stack<String> data = new java.util.Stack<>();
+		long start = System.nanoTime();
+		long end = 0;
+		for(int i=0;i<array.length;i++) {
+			data.push(array[i]);
+			for(int j=0;j<array.length;j++) {
+				if((array[j]+data.peek()).equals(expected)) {
+					end = System.nanoTime();
+					System.out.println("elapsed time: "+(end - start)); 
+					return true;
+				}
+				if((data.peek()+array[j]).equals(expected)) {
+					end = System.nanoTime();
+					System.out.println("elapsed time: "+(end - start)); 
+					return true;
+				}
+			}
+			data.pop();
+		}
+		System.out.println("elapsed time: "+(end - start)); 
+		return false;
+	}
+	
+	
+	
+	
+	public static boolean solution(String[] array, String expected) {
+		long start = System.nanoTime();
+		long end = 0;
+
+		for(int i=0;i<array.length;i++) {
+			String word = array[i];
+			for(int j=0;j<array.length;j++) {
+				if((word+""+array[j]).toLowerCase().equals(expected.toLowerCase())) {
+					end = System.nanoTime();
+					System.out.println("elapsed time: "+(end - start)); 
+					return true;
+				}
+			}
+		}
+		System.out.println("elapsed time: "+(end - start));
+		return false;
+	}
+	
+}
+

@@ -36,9 +36,9 @@ public class BinarySearc {
 	public static void main(String args[]) 
 	{ 
 		BinarySearc ob = new BinarySearc(); 
-		int arr[] = { 2, 3, 4, 10, 40 }; 
+		int arr[] = { 234123,345678,983072 }; 
 		int n = arr.length; 
-		int x = 10; 
+		int x = 345678; 
 		int result = ob.binarySearch(arr, x); 
 		if (result == -1) 
 			System.out.println("Element not present"); 

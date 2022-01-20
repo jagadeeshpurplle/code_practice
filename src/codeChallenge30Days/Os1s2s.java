@@ -9,7 +9,7 @@ public class Os1s2s {
 		int[] data = perform(new int[] {1,0,2,0,1,0,2,1,2});
 		System.out.println(Arrays.toString(data));
 		
-		int[] data2 = perform2(new int[] {1,0,2,0,1,0,2,1,2});
+		int[] data2 = perform2(new int[] {2,0,2,0,1,0,2,1,2});
 		System.out.println(Arrays.toString(data2));
 	}
 	

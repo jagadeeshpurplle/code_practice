@@ -28,4 +28,19 @@ public class PermutationsNew {
 		a[cindx] = temp;
 		
 	}
+	
+	
+	public static void printPerm(int[] a, int cindex) {
+		if(cindex == a.length-1) {
+			for(int value: a) {
+				System.out.print(value+" ");
+			}
+			System.out.println();
+		}
+		for(int i = cindex;i<a.length;i++) {
+			swap(a, i, cindex);
+			printPerm(a, cindex+1);
+			swap(a, i, cindex);
+		}
+	}
 }

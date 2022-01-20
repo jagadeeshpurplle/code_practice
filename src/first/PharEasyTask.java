@@ -25,20 +25,18 @@ public static void main(String args[]) {
 	    
 	    char present =' '; 
 	    char next = ' ';
-	    
+
 	    for(int i=0;i<charsinput.length;i++){ 
 	        present = charsinput[i]; //A B H
+	        
 	        if(i!=charsinput.length-1){
 	         next = charsinput[i+1]; //B B 
 	        }
-	       
 	        
 	        if(map.containsKey(charsinput[i])){ //A
 	            map.put(charsinput[i], map.get(charsinput[i])+1);
-	            
 	        }else{
 	            map.put(charsinput[i], 1); //A B
-	            
 	        }
 	        if(i!=charsinput.length-1){
 	        	if(present == next){ // A == B
@@ -47,11 +45,9 @@ public static void main(String args[]) {
 	        		finalOutput.append(charsinput[i]+""+map.get(charsinput[i])); // 1A
 	        		map.remove(charsinput[i]);
 	        	}
-	        	
 	        }else {
 	        	finalOutput.append(charsinput[i]+""+map.get(charsinput[i])); // 1A
-	        }
-	          
+	        }          
 	    }
 		return finalOutput;
 	}

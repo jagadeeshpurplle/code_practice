@@ -1,22 +1,41 @@
 package hackerrank;
 
-import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.List;
 
 public class MiniMax {
 	
 	public static void miniMax(int[] array) {
 		
-		Arrays.sort(array);
+		List<String> list1 = new ArrayList<>(); 
+		list1.add("One"); 
+		list1.add("Two"); 
+		list1.add("Three"); 
+
+		List<String> list2 = new ArrayList<>(); 
+		list2.add("Two"); 
+
+		list1.removeAll(list2); 
+		System.out.println(list1);
 		
-		int min = array[0];
-		int max = array[array.length-1];
+		String a = "bikini";
+		String b = new String("bikini");
+		String c = new String("bikini");
+		System.out.println(a == b);
+		System.out.println(b == c);
 		
-		int sum = Arrays.stream(array).sum();
-		
-		int minimumSum = sum - max;
-		int maxSum = sum-min;
-		
-		System.out.println("MaxSum: "+maxSum+" MinSum: "+minimumSum);
+//		Arrays.sort(array);
+//		
+//		int min = array[0];
+//		int max = array[array.length-1];
+//		
+//		int sum = Arrays.stream(array).sum();
+//		
+//		int minimumSum = sum - max;
+//		int maxSum = sum-min;
+//		
+//		System.out.println("MaxSum: "+maxSum+" MinSum: "+minimumSum);
+	
 	}
 	
 	public static void main(String[] args) {
